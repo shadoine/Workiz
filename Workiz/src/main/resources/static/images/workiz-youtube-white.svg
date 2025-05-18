@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 43.1 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #eee;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="Ebene_1">
+      <g id="Ebene_1-2" data-name="Ebene_1">
+        <path class="cls-1" d="M41.9,5.5c-.4-2.2-2.3-3.8-4.5-4.3C34.1.5,28,0,21.4,0S8.6.5,5.3,1.2C3.1,1.7,1.2,3.2.8,5.5c-.4,2.5-.8,6-.8,10.5s.4,8,.9,10.5c.4,2.2,2.3,3.8,4.5,4.3,3.5.7,9.5,1.2,16.1,1.2s12.6-.5,16.1-1.2c2.2-.5,4.1-2,4.5-4.3.4-2.5.9-6.1,1-10.5-.2-4.5-.7-8-1.2-10.5ZM16,23v-14l12.2,7-12.2,7Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

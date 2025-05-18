@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Workiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
+
+    <!-- Include Choices CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+    <!-- Include Choices JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+	<link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
+	<script src="https://unpkg.com/js-datepicker"></script>
+
+</head>
+<body>	
+    <header>
+        <div class="container">
+            <div class="content">
+                <div class="logo">
+                    <img src="../images/workiz-logo-white.svg" />
+                </div>
+                <a href="http://localhost:8080" class="logout">
+                    <img src="../images/workiz-logout-white.svg" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <div class="add-work" id="work">
+                <h2>Add work</h2>
+
+                <form class="user-input">
+                    <div class="form-container">
+                        <div class="cols three-cols">
+
+                            <div class="col">
+                                <label for="project-selection">Project</label>
+                                <select name="project-selection" id="project-selection" required>
+                                </select>
+                            </div>
+
+                            <div class="col date-picker-container">
+                                <label for="date-picker">Date</label>
+                                <input type="text" id="date-picker" name="date-picker" required>
+                            </div>
+
+                            <div class="col">
+                                <label for="start-time">Start time</label>
+                                <input type="time" id="start-time" name="start-time" required>
+
+                                <label for="end-time">End time</label>
+                                <input type="time" id="end-time" name="end-time" required>
+                            </div>
+                        </div>
+
+
+                        <div class="col">
+                            <label for="short-desc">Short description</label>
+                            <textarea id="short-desc" name="short-desc" maxlength="255"></textarea>
+                        </div>
+                    </div>
+					
+					<div class="btn-container">
+						<input type="submit" value="Add" class="add-work-btn">
+					</div>
+
+                </form>
+            </div>
+
+            <div class="overview-work cols two-cols">
+                <div class="col work-list">
+                    <h3>Latest work</h3>
+					
+					<div class="filter-container">
+						<div class="filter-toggle">
+							<span class="filter-icon"></span>
+							<span>Filter</span>
+						</div>
+						
+						<form class="filter-form">
+
+							<label for="work-filter-pname">Project</label>
+							<input type="text" id="work-filter-pname" name="work-filter-pname">
+							
+							<div class="cols two-cols filter-btns" data-filter="work">
+								<div class="col">
+									<input type="reset" value="Reset" class="reset-filter-btn" />
+								</div>
+								<div class="col">
+									<input type="submit" value="Apply filter" class="apply-filter-btn"/>
+								</div>
+							</div>
+						</form>
+					</div>
+					
+                    <table>
+						<thead>
+							<tr>
+							    <th>Project</th>
+							    <th>Date</th>
+							    <th>Duration</th>
+							    <th></th>
+							</tr>							
+						</thead>
+						<tbody>
+						</tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="col project-list">
+                    <h3>Most worked on</h3>
+					<div class="filter-container">
+						<div class="filter-toggle">
+							<span class="filter-icon"></span>
+							<span>Filter</span>
+						</div>
+						
+						<form class="filter-form">
+							<label for="project-filter-pname">Project</label>
+							<input type="text" id="project-filter-pname" name="project-filter-pname">
+							
+							<div class="cols two-cols filter-btns" data-filter="project">
+								<div class="col">
+									<input type="reset" value="Reset" class="reset-filter-btn" />
+								</div>
+								<div class="col">
+									<input type="submit" value="Apply filter" class="apply-filter-btn"/>
+								</div>
+							</div>
+						</form>
+					</div>
+                    <table>
+						<thead>
+							<tr>
+	                            <th>Project</th>
+	                            <th>Customer</th>
+	                            <th>Overall duration</th>
+	                            <th>Status</th>
+	                        </tr>							
+						</thead>
+						<tbody>
+							
+						</tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="content">
+                <div class="cols">
+                    <div>
+                        <h4>Contact</h4>
+                        <p>Workiz GmbH</p>
+                        <p>Riggenbachstrasse 16</p>
+                        <p>4600 Olten</p>
+                        <a href="mailto:info@workiz.com">info@workiz.com</a>
+                    </div>
+
+                    <div>
+                        <h4>Need help?</h4>
+                        <div class="icon-text">
+                            <a href="mailto:help@workiz.com">help@workiz.com</a>
+                        </div>
+                        <div class="icon-text">
+                            <p>061 23 45 67</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4>Legal</h4>
+                        <a href="https://www.fhnw.ch/en/imprint/data-protection" target="_blank">Data Protection</a>
+                        <a href="https://www.fhnw.ch/en/imprint" target="_blank">Imprint</a>
+                    </div>
+                </div>
+                <div class="sm">
+                    <a href="https://www.instagram.com/fhnw.ch/" target="_blank">
+                        <img src="../images/workiz-insta-white.svg" />
+                    </a>
+                    <a href="https://twitter.com/FHNW" target="_blank">
+                        <img src="../images/workiz-x-white.svg" />
+                    </a>
+                    <a href="https://www.youtube.com/@FHNW" target="_blank">
+                        <img src="../images/workiz-youtube-white.svg" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	
+
+	<div class="mobile-info">
+		<p>This web application is not available on small screens. Please use a device with a screen width of at least 768 pixels."</p>
+	</div>
+
+   <script src="../script/main.js"></script>
+
+</body>
+</html>
