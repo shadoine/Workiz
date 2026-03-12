@@ -2,7 +2,7 @@
 
 ## 📌 Übersicht
 
-Dieses Projekt **Workiz** wurde im Rahmen des Moduls **Internettechnologien** am **FHNW Olten** im Studiengang **Wirtschaftsinformatik** erstellt.  
+Dieses Projekt **Workiz** wurde im Rahmen des Moduls **Internettechnologien** am **FHNW Olten** erstellt.  
 
 Es handelt sich um ein **Übungs-/Studentenprojekt**, entwickelt zu Lehrzwecken. Das Projekt demonstriert grundlegende Konzepte und Technologien aus dem Modul, hat jedoch keinen kommerziellen Hintergrund.
 
